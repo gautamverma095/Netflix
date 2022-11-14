@@ -1,54 +1,41 @@
 import React from "react"
 
 import ReactDOM from "react-dom"
-
-function Card(props){
-
-  console.log(props);
-  return (
-    <>
-      <div className="cards">
-        <div className="card">
-          <img
-            src={props.imageLink}
-            alt="myPic"
-            className="card__img"
-          />
-          <div className="card__info">
-            <span className="card__category"> {props.name}</span>
-            <h3 className="card__title">{props.title}</h3>
-            <a
-              href={props.sLink}
-              target="_blank"
-            >
-              <button> Watch now </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
+import Card from "./Card"
+import "./index.css"
+import Sdata from "./Sdata"
 ReactDOM.render(
   <>
+    <h1 className="heading_style">List of top 5 Netflix Series</h1>
     <Card
-      imageLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo9ivwH1p2Q0m_2WOVPSoeJO6XCOReSGVc-g0vVifHnQ&s"
-      name="A Netflix original series"
-      sLink="https://www.netflix.com/watch/80114790?trackId=14277281"
-      title="DARK"
+      imageLink={Sdata[0].imageLink}
+      name={Sdata[0].name}
+      sLink={Sdata[0].sLink}
+      title={Sdata[0].title}
     />
     <Card
-      imageLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo9ivwH1p2Q0m_2WOVPSoeJO6XCOReSGVc-g0vVifHnQ&s"
-      name="A Netflix original series"
-      sLink="https://www.netflix.com/watch/81038343?trackId=14277281"
-      title="Extra Curricular"
+      imageLink={Sdata[1].imageLink}
+      name={Sdata[1].name}
+      sLink={Sdata[1].sLink}
+      title={Sdata[1].title}
     />
     <Card
-      imageLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8YcnIjA8lOzVvNQbQQ48zbYs5J2IfhB9LZqtl5Eo&s"
-      name="A Netflix original series"
-      sLink="https://www.netflix.com/watch/80077368?trackId=14277281"
-      title="Stranger Things"
+      imageLink={Sdata[2].imageLink}
+      name={Sdata[2].name}
+      sLink={Sdata[2].sLink}
+      title={Sdata[2].title}
+    />
+    <Card
+      imageLink={Sdata[3].imageLink}
+      name={Sdata[3].name}
+      sLink={Sdata[3].sLink}
+      title={Sdata[3].title}
+    />
+    <Card
+      imageLink={Sdata[2].imageLink}
+      name={Sdata[2].name}
+      sLink={Sdata[2].sLink}
+      title={Sdata[2].title}
     />
   </>,
   document.getElementById("root")
